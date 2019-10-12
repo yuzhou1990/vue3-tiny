@@ -6,11 +6,11 @@
 
 先看下 vue3 的计算属性和点击累加的代码
 
-[vue-next 源码地址](https://github.com/vuejs/vue-next)
+[vue-next 下载源码](https://github.com/vuejs/vue-next)
 
 执行 npm run dev 调试打个包
 
-下载源码，根目录下创建 examples/vue/index.html
+根目录下创建 examples/vue/index.html
 
 ```html
 <!DOCTYPE html>
