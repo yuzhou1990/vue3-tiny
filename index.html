@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <button id="btn">click</button>
+    <script src="./tiny-vue3.js"></script>
+    <script>
+      const root = document.querySelector('#app')
+      const btn = document.querySelector('#btn')
+
+      const obj = reactive({
+        name: 'chiu',
+        age: 29
+      })
+      let double = computed(() => obj.age * 2)
+      effect(() => {
+        root.innerHTML = `<h1>${obj.name} now ${obj.age}, double ${double.value}</h1>`
+      })
+
+      btn.addEventListener(
+        'click',
+        () => {
+          obj.age += 1
+        },
+        false
+      )
+    </script>
+  </body>
+</html>
