@@ -84,9 +84,7 @@
 
 ## typescript
 
-全部由 typescript 构建，我们学的 TS 热度++ 三大库的最终选择，ts 乃今年必学技能
-
-大家回顾下
+全部由 typescript 构建，三大库的最终选择，ts 乃今后必学技能
 
 ## proxy 取代 deineProperty
 
@@ -168,7 +166,7 @@ function reactive(target) {
 }
 ```
 
-基本上除了 set map weakset 和 weakmap，都是 baseHandlers，下面重点关注一下，Proxy 的语法 大家需要复习下 es6
+基本上除了 set map weakset 和 weakmap，都是 baseHandlers，下面重点关注一下，Proxy 的语法 这里可能需要看看相关的 es6 知识点
 
 ```typescript
 export const readonlyHandlers: ProxyHandler<any> = {
@@ -234,7 +232,7 @@ o.push(4)
 
 比 defineproperty 优秀的 就是数组和对象都可以直接触发 getter 和 setter， 但是数组会触发两次，因为获取 push 和修改 length 的时候也会触发
 
-我们还可以用**Reflect**
+还可以用**Reflect**
 
 ```js
 let data = [1, 2, 3]
@@ -252,7 +250,7 @@ let o = new Proxy(obj, {
 o.push(4)
 ```
 
-多次触发和深层嵌套问题，一会我们看 vue3 是怎么解决的
+多次触发和深层嵌套问题，一会看 vue3 是怎么解决的
 
 ```js
 let data = { name: { title: 'kkb' } }
@@ -268,6 +266,8 @@ let o = new Proxy(obj, {
 })
 
 o.name.title = 'xx'
+
+// get name
 ```
 
 ## vue3 深度检测
